@@ -7,7 +7,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class TeamTaskManagerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TeamTaskManagerApplication.class, args);
+		var ctx = SpringApplication.run(TeamTaskManagerApplication.class, args);
+		String dbUrl = ctx.getEnvironment().getProperty("PROD_DB_URL");
+		System.out.println("---------------------------------------------------------");
+		System.out.println("DEBUG: PROD_DB_URL is: " + dbUrl);
+		System.out.println("---------------------------------------------------------");
 	}
 
 }
