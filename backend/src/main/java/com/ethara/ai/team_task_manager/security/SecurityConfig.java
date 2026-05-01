@@ -30,6 +30,7 @@ public class SecurityConfig {
             .cors(cors -> {}) // Will be configured in CorsConfig
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/api/auth/**").permitAll()
+                .requestMatchers("/", "/index.html", "/static/**", "/assets/**", "/favicon.ico", "/*.js", "/*.css", "/*.png", "/*.svg").permitAll()
                 .anyRequest().authenticated()
             )
             .sessionManagement(session -> session
