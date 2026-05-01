@@ -31,6 +31,7 @@ public class SecurityConfig {
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/api/auth/**").permitAll()
                 .requestMatchers("/", "/index.html", "/static/**", "/assets/**", "/favicon.ico", "/*.js", "/*.css", "/*.png", "/*.svg").permitAll()
+                .requestMatchers("/{path:[^\\.]*}", "/**/{path:[^\\.]*}").permitAll()
                 .anyRequest().authenticated()
             )
             .sessionManagement(session -> session
