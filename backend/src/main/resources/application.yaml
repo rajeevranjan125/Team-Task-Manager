@@ -2,9 +2,9 @@ spring:
   application:
     name: team-task-manager
   datasource:
-    url: jdbc:mysql://${MYSQLHOST:mysql.railway.internal}:${MYSQLPORT:3306}/${MYSQLDATABASE:railway}?allowPublicKeyRetrieval=true&useSSL=false
-    username: ${MYSQLUSER:root}
-    password: ${MYSQLPASSWORD:QMUelClvabHvnMrmWDujxMDDHLHrkuVS}
+    url: jdbc:mysql://junction.proxy.rlwy.net:45952/railway?allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+    password: sxUuoKTZQmnEzLwIMpfUwVmxeDnuZqNW
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
