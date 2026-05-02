@@ -2,7 +2,7 @@ spring:
   application:
     name: team-task-manager
   datasource:
-    url: jdbc:mysql://junction.proxy.rlwy.net:45952/railway?allowPublicKeyRetrieval=true&useSSL=false
+    url: jdbc:mysql://junction.proxy.rlwy.net:45952/railway?allowPublicKeyRetrieval=true&useSSL=true&enabledTLSProtocols=TLSv1.2,TLSv1.3
     username: root
     password: sxUuoKTZQmnEzLwIMpfUwVmxeDnuZqNW
     driver-class-name: com.mysql.cj.jdbc.Driver
