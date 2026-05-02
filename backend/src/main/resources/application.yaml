@@ -2,12 +2,11 @@ spring:
   application:
     name: team-task-manager
   datasource:
-    url: jdbc:mysql://junction.proxy.rlwy.net:45952/railway?allowPublicKeyRetrieval=true&useSSL=true
-    username: root
-    password: sxUuoKTZQmnEzLwIMpfUwVmxeDnuZqNW
+    url: jdbc:mysql://${MYSQLHOST:junction.proxy.rlwy.net}:${MYSQLPORT:45952}/${MYSQLDATABASE:railway}?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
+    username: ${MYSQLUSER:root}
+    password: ${MYSQLPASSWORD:sxUuoKTZQmnEzLwIMpfUwVmxeDnuZqNW}
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
-    database-platform: org.hibernate.dialect.MySQLDialect
     hibernate:
       ddl-auto: update
     show-sql: true
